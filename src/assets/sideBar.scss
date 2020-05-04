@@ -1,0 +1,136 @@
+.sidebar {
+    left: -216px;
+    display: block;
+    background: #303036;
+    padding: 8px;
+    color: #fff;
+    overflow: hidden;
+    width: 216px;
+    z-index: 999;
+    .top-bar {
+        display: block;
+        width: 220px;
+        height: 72px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #808290;
+    }
+
+    &.open{
+        left: 0!important;
+    }
+}
+
+.sidebar, .sidebar-bg {
+    height: 100%;
+    position: fixed;
+}
+
+.load-more, .sidebar, .sidebar-bg {
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -khtml-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+}
+
+.theme-selector .selected {
+    background: #808290!important;
+    color: #303036!important;
+}
+.theme-dark {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-size: 14px;
+    margin-left: 25px;
+}
+.theme-light {
+    font-size: 14px;
+    margin-left: 99px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.theme-dark, .theme-light {
+    position: absolute;
+    height: 32px;
+    width: 75px;
+    padding: 6px;
+    text-align: center;
+    border: 1px solid #808290;
+    background: #303036;
+    color: #fff!important;
+}
+.category-header {
+    font-size: 14px;
+    color: #808290;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    .category-list {
+        width: 100%;
+        cursor: pointer;
+    }
+}
+
+ul {
+    padding: 0;
+}
+ul {
+    list-style-type: none;
+}
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+
+.sidebar-bg {
+    width: 100%;
+    cursor: pointer;
+    z-index: 99;
+    background: rgba(255,255,255,.9);
+}
+.sidebar, .sidebar-bg {
+    height: 100%;
+    position: fixed;
+}
+.load-more, .sidebar, .sidebar-bg {
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -khtml-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+}
+
+.category-list .selected {
+    background: #808290!important;
+}
+.category-list li {
+    height: 38px;
+    font-size: 16px;
+    padding-left: 28px;
+    padding-top: 9px;
+    border-radius: 2px;
+    // margin-top: 3px;
+    color: #fff!important;
+}
+.category-list li:hover {
+    background: #44444d;
+}
+@media only screen and (min-width: 750px){
+    .sidebar-overlay {
+        display: none !important;
+    }
+}
+
+.listButton {
+    border: none;
+    background-color: #303036; 
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    text-align: start;
+}
+button:focus {
+    outline: none;
+}

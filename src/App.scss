@@ -1,0 +1,132 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+nav {
+  .header {
+    position: fixed;
+    width: 100%;
+    height: 72px;
+    background: #fff;
+    z-index: 8;
+  }
+  .toggle-button {
+    border: none;
+    background-color: #fff;
+    font-size: 2rem;
+    margin-left: 1vh;
+  }
+  .clickable {
+    cursor: pointer;
+  }
+  .menu {
+    display: inline-block;
+    width: 120px;
+    padding-left: 20px;
+    height: 72px;
+    padding-top: 8px;
+    font-size: 14px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -khtml-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    color: #44444d;
+    &.open {
+      margin-left: 216px;
+    }
+  }
+
+  .nav-icon {
+    width: 35px;
+    div,
+    &:after,
+    &:before {
+      background-color: #222;
+      border-radius: 3px;
+      content: "";
+      display: block;
+      height: 5px;
+      margin: 7px 0;
+      transition: all 0.2s ease-in-out;
+    }
+    &.toggled {
+      &:before {
+        transform: translateY(12px) rotate(135deg);
+      }
+      &:after {
+        transform: translateY(-12px) rotate(-135deg);
+      }
+      div {
+        transform: scale(0);
+      }
+    }
+  }
+  .logo {
+    position: absolute;
+    height: 72px;
+    padding: 8px;
+    left: 50%;
+    margin-left: -89px;
+  }
+}
+
+.z-depth-1 {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+@media only screen and (max-width: 750px) {
+  .menu {
+    &.open {
+      display: none !important;
+    }
+  }
+}
+
+//Loader
+.lds-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transform: translateZ(1px);
+}
+.lds-circle > div {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  background: #007bff;
+  animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+@keyframes lds-circle {
+  0%,
+  100% {
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
+}
+#sticky-footer {
+  flex-shrink: none;
+}
