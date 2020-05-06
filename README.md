@@ -1,5 +1,5 @@
 # SmartUp!
-
+DEMO:: https://dyn.netlify.app/
 This Project is Built using MERN Stack.
 
 This project give small unique article on user specific interests every time he/she login.
